@@ -2,16 +2,23 @@ package com.compasso.states.states.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
 import com.compasso.states.states.controller.dto.StateDto;
+import com.compasso.states.states.model.State;
+import com.compasso.states.states.repository.StatesRepository;
 
 
 @RestController @RequestMapping("/api/states")
 public class StatesController {
+	
+	@Autowired
+	private StatesRepository stateRepository;
+	
 	
 	@GetMapping
 	public List<StateDto> lista(String nomeState)

@@ -2,10 +2,12 @@ package com.compasso.states.states.model;
 
 import java.math.BigDecimal;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@Entity
 public class State {
 
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
