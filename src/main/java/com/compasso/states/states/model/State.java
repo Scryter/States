@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-public class States {
+public class State {
 
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;							//"id": "1",
@@ -15,14 +15,14 @@ public class States {
 	private String capital;					// "capital": "Natal" ,
 	private BigDecimal area;				// "area": 52.797*/
 
-	public States(String nome, String regiao, int populacao, String capital, BigDecimal area) {
+	public State(String nome, String regiao, int populacao, String capital, BigDecimal area) {
 		this.nome = nome;
 		this.regiao = regiao;
 		this.populacao = populacao;
 		this.capital = capital;
 		this.area = area;
 	}
-	public States() {
+	public State() {
 	}
 	public int getId() {
 		return id;
