@@ -64,6 +64,7 @@ public class StatesController {
 	}
 	
 	@PutMapping("/{id}")
+	@Transactional
 	public ResponseEntity<StateDto> atualizar(@PathVariable Long id, @RequestBody @Valid AtualizacaoStateForm form)
 	{
 		State state = form.atualizar(id, stateRepository);
