@@ -45,7 +45,6 @@ public class StateForm
 	
 	public State converter() {
 		// TODO Auto-generated method stub
-		//Car car = repository.findByNome(nome)
 		return new State(nome, regiao, populacao, capital, area);
 	}
 }
