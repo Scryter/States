@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.compasso.states.states.model.State;
 
-public interface StatesRepository extends JpaRepository<State, String>{
+public interface StatesRepository extends JpaRepository<State, Long>{
 	List<State> findByNome(String nome);
 
 }
